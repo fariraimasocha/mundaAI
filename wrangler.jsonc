@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "mundaai",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-09-19",
+  "compatibility_flags": ["nodejs_compat", "nodejs_compat_populate_process_env"],
+  "triggers": {
+    "crons": ["0 4 * * *"],
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "mundaai",
+      "database_id": "2cb47db5-7492-4ba2-a1d2-a06c6d745f67",
+      "migrations_dir": "migrations",
+    },
+  ],
+}
