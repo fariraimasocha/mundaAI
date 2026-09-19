@@ -55,7 +55,13 @@ pnpm dev
 
 The server listens on port `3000` unless you set `PORT`. Open [http://localhost:3000](http://localhost:3000). You should see `mundaAI up`.
 
-Point the WhatsApp webhook at `https://<your-public-host>/webhook` and use the same string as `WHATSAPP_VERIFY_TOKEN`.
+You need to run [ngrok](https://ngrok.com) for the WhatsApp webhook to work locally. Meta cannot call `localhost`. In another terminal:
+
+```bash
+ngrok http 3000
+```
+
+Point the WhatsApp webhook at `https://<the-ngrok-host>/webhook` and use the same string as `WHATSAPP_VERIFY_TOKEN`. The deployed worker does not need ngrok. Its webhook is `https://mundaai.farirai.workers.dev/webhook`.
 
 Other commands:
 
