@@ -19,7 +19,8 @@
     "test": "tsx --env-file-if-exists=.env --test \"src/**/*.test.ts\"",
     "d1:migrate:local": "wrangler d1 migrations apply mundaai --local",
     "d1:migrate:remote": "wrangler d1 migrations apply mundaai --remote",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "pages:deploy": "pnpm --dir website exec vite build && wrangler pages deploy website/dist --project-name mundaai --branch main --commit-dirty=true"
   },
   "keywords": [],
   "author": "Farirai Masocha",

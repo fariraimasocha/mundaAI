@@ -1,0 +1,6 @@
+{
+  "name": "mundaai — Smart Farming Zimbabwe",
+  "description": "mundaai: Your AI Agronomist for Zimbabwe with multimodal crop diagnosis, local weather telemetry, and WhatsApp advisory.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

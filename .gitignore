@@ -3,4 +3,4 @@ dist
 .env
 *.log
 .wrangler
-data
+/data

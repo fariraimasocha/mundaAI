@@ -10,7 +10,7 @@ WhatsApp backend for smallholder tomato growers, mostly in Zimbabwe. A farmer te
 - Uses Open-Meteo so spray advice follows today's weather.
 - Stores crop photos with UploadThing when that token is set.
 
-There is no public website. `GET /` returns `mundaAI up` so you can confirm the process is running.
+The public site lives in `website/` and is deployed to Cloudflare Pages at https://mundaai.pages.dev. `GET /` on the WhatsApp worker still returns `mundaAI up` so you can confirm that process is running.
 
 ## Technologies
 
@@ -93,14 +93,20 @@ wrangler.jsonc     Cloudflare D1 binding
 
 ## Deployed app
 
-https://mundaai.farirai.workers.dev
+https://mundaai.pages.dev
 
-`GET /` returns `mundaAI up`. Point the WhatsApp webhook at `https://mundaai.farirai.workers.dev/webhook`.
+The WhatsApp worker is https://mundaai.farirai.workers.dev. `GET /` on that host returns `mundaAI up`. Point the WhatsApp webhook at `https://mundaai.farirai.workers.dev/webhook`.
 
-To deploy again after a code change:
+To deploy the worker again after a backend change:
 
 ```bash
 pnpm deploy
+```
+
+To deploy the website again after a frontend change:
+
+```bash
+pnpm pages:deploy
 ```
 
 Secrets are not in the repo. Upload them with Wrangler from your local `.env` (same keys as `.env.example`) using `pnpm exec wrangler secret bulk`. Do not commit `.env`.

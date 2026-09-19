@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Subtle gradient for golden leaf lobes -->
+    <linearGradient id="leafLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DEAA48" />
+      <stop offset="100%" stop-color="#B8822A" />
+    </linearGradient>
+    <linearGradient id="leafRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5B75A" />
+      <stop offset="100%" stop-color="#C59135" />
+    </linearGradient>
+  </defs>
+
+  <!-- Dark rounded squircle container -->
+  <rect x="16" y="16" width="480" height="480" rx="112" ry="112" fill="#1C1F24" />
+
+  <!-- The stylized bold letter M -->
+  <!-- Left vertical pillar -->
+  <path
+    d="M 88 128 L 148 128 L 148 384 L 88 384 Z"
+    fill="#FFFFFF"
+  />
+
+  <!-- Right vertical pillar -->
+  <path
+    d="M 364 128 L 424 128 L 424 384 L 364 384 Z"
+    fill="#FFFFFF"
+  />
+
+  <!-- Left diagonal arm of M -->
+  <path
+    d="M 148 128 L 206 128 L 256 360 L 244 384 L 194 384 L 148 170 Z"
+    fill="#FFFFFF"
+  />
+
+  <!-- Right diagonal arm of M -->
+  <path
+    d="M 364 128 L 306 128 L 256 360 L 268 384 L 318 384 L 364 170 Z"
+    fill="#FFFFFF"
+  />
+
+  <!-- Golden Leaf nestled in the center V -->
+  <!-- Left half of the leaf -->
+  <path
+    d="M 256 160 C 218 214 212 300 254 366 L 254 160 Z"
+    fill="url(#leafLeft)"
+  />
+
+  <!-- Right half of the leaf -->
+  <path
+    d="M 256 160 C 294 214 300 300 258 366 L 258 160 Z"
+    fill="url(#leafRight)"
+  />
+
+  <!-- Leaf center vein / slit -->
+  <line x1="256" y1="166" x2="256" y2="362" stroke="#1C1F24" stroke-width="2.5" stroke-linecap="round" />
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fullLeafLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DEAA48" />
+      <stop offset="100%" stop-color="#B68028" />
+    </linearGradient>
+    <linearGradient id="fullLeafRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E9BD65" />
+      <stop offset="100%" stop-color="#C48E32" />
+    </linearGradient>
+  </defs>
+
+  <!-- Warm Off-White / Cream Canvas -->
+  <rect width="1024" height="1024" fill="#FAF6F0" />
+
+  <!-- Centered Dark Squircle Container (width ~500, height ~500) -->
+  <g transform="translate(262, 162)">
+    <rect
+      x="0"
+      y="0"
+      width="500"
+      height="500"
+      rx="132"
+      ry="132"
+      fill="#1C1F24"
+    />
+
+    <!-- Stylized White Letter M -->
+    <path
+      d="M 80 120 L 140 120 L 250 324 L 360 120 L 420 120 L 420 380 L 360 380 L 360 212 L 270 376 L 230 376 L 140 212 L 140 380 L 80 380 Z"
+      fill="#FFFFFF"
+    />
+
+    <!-- Golden Leaf nestled inside the V -->
+    <path
+      d="M 250 156 C 214 200 206 280 249.5 348 L 249.5 156 Z"
+      fill="url(#fullLeafLeft)"
+    />
+    <path
+      d="M 250 156 C 286 200 294 280 250.5 348 L 250.5 156 Z"
+      fill="url(#fullLeafRight)"
+    />
+    <!-- Leaf Center Stem / Midrib -->
+    <line
+      x1="250"
+      y1="162"
+      x2="250"
+      y2="344"
+      stroke="#1C1F24"
+      stroke-width="2.5"
+      stroke-linecap="round"
+    />
+  </g>
+
+  <!-- Lowercase 'm u n d a a i' text below the mark with wide tracking -->
+  <text
+    x="512"
+    y="790"
+    font-family="'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif"
+    font-size="64"
+    font-weight="700"
+    letter-spacing="0.32em"
+    fill="#1C1F24"
+    text-anchor="middle"
+  >
+    mundaai
+  </text>
+</svg>
